@@ -1,7 +1,6 @@
 V. Santos, 07-dez-2019,13:27
 
-nao da
-
+Cheguei aqui- Pedro    Eu também DIOGO    Eu cheguei agora! João Pedro   Eu tambem miguel
 
 How to send files to online repo
 --------------------------------
