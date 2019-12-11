@@ -1,0 +1,7 @@
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/rebuild_cache.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/cpfiles.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/doc.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/prototypes.h.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/myf.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/allclean.dir
+/home/migasneto/PARI/PARI/Prática/GitHub/Grupo_4_PARI19/Build/CMakeFiles/edit_cache.dir
