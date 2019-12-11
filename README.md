@@ -3,18 +3,22 @@ Cheguei aqui- Pedro    Eu também DIOGO
 
 How to send files to online repo
 --------------------------------
-`git add .
-git commit -m "mensagem de commit"
-git push`  
+
+```bash
+ git add .
+ git commit -m "mensagem de commit"
+ git push`  
+``` 
 
 Compilation
 ----------
 
-`mkdir build
-cd build
-cmake ..
-make`
-
+```bash
+ mkdir build
+ cd build
+ cmake ..
+ make
+```
 
 
 
