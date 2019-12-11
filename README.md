@@ -1,6 +1,24 @@
 V. Santos, 07-dez-2019,13:27
 Cheguei aqui- Pedro    Eu também DIOGO
 
+How to send files to online repo
+--------------------------------
+
+git add .
+git commit -m "mensagem de commit"
+git push
+
+Compilation
+----------
+
+mkdir build
+cd build
+cmake ..
+make
+
+
+
+
 Steps for the class
 --------------------
 
