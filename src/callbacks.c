@@ -70,7 +70,7 @@ gboolean on_drawingarea1_motion_notify_event(GtkWidget * widget, GdkEvent * even
 	switch( statusG.active_g )
 	{
 		case STARPOLYGON:
-			//...
+			pari_draw_starpolygon(event);
 			break;
 
 		case REGULARPOLYGON:
@@ -125,6 +125,29 @@ void on_starpolygon_rb_clicked(GtkWidget * widget, gpointer user_data)
 	free(tmp);
 	statusG.starpolygon_vertices=n;
 	statusG.active_g=STARPOLYGON;
+
+
+	GtkEntry *entry2 = GTK_ENTRY(gtk_builder_get_object (builderG, "starpolygonfill_rgbcolor"));
+	if( entry2)
+	{
+		txt=gtk_entry_get_text(entry2);
+		char *tmp=malloc(strlen(txt)+1);
+		strcpy(tmp,txt);
+		int n=atoi(tmp);
+		if ( n < 0 ) //only -1 is accepted for negatives (no filling)
+		{
+			n=-1;
+			sprintf(tmp,"%d",n);
+			gtk_entry_set_text( entry2, tmp);
+		}
+
+		statusG.starpolygon_rgbcolor=n;
+
+		free(tmp);
+	}
+
+
+
 }
 
 
