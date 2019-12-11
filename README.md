@@ -1,4 +1,4 @@
-V. Santos, 07-dez-2019,13:27
+V. Santos, 11-dez-2019,13:27
 
 Cheguei aqui- Pedro    Eu também DIOGO    Eu cheguei agora! João Pedro   Eu tambem miguel
 
@@ -8,7 +8,7 @@ How to send files to online repo
 ```bash
  git add .
  git commit -m "mensagem de commit"
- git push`  
+ git push  
 ``` 
 
 Compilation
