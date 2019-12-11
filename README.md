@@ -1,5 +1,6 @@
 V. Santos, 07-dez-2019,13:27
 Cheguei aqui- Pedro
+Eu tambem chiguei ! Miguel
 
 Steps for the class
 --------------------
