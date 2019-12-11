@@ -145,7 +145,7 @@
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                     <property name="group">starpolygon_rb</property>
-                    <signal name="clicked" handler="on_freehandpolygon_rb_clicked" object="regular_numvertices_freehandPolygon" swapped="no"/>
+                    <signal name="clicked" handler="on_freehandpolygon_rb_clicked" swapped="no"/>
                   </object>
                   <packing>
                     <property name="left_attach">0</property>

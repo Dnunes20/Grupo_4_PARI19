@@ -9,12 +9,13 @@
 #ifndef _MYF_H_
 #define _MYF_H_
 
-
+#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <signal.h>
 #include <gtk/gtk.h>
 #include <cairo.h>
+#include <time.h> 
 
 
 #define max(a,b) ((a)>(b)?(a):(b))
@@ -61,6 +62,7 @@ typedef struct {
 		drawings_type active_g; 
 		int starpolygon_vertices;
 		int regularpolygon_vertices;
+		int freehandpolygon_vertices;
 		int starpolygon_rgbcolor;
 		int regularpolygon_rgbcolor;
 		int freehandpolygon_rgbcolor;

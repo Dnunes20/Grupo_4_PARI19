@@ -103,7 +103,65 @@ void pari_draw_starpolygon(GdkEvent *event)
  */
 void pari_draw_freehandpolygon(GdkEvent *event)
 {
-	//...
+	static int last_button=0;
+	GdkEventButton *geb=(GdkEventButton *)event; //aux variable
+	switch( event->type)
+	{
+		case GDK_BUTTON_PRESS: //it's a new one
+			last_button=geb->button;
+			if( geb->button == 1 )  //left button
+			{
+				double x=geb->x;
+				double y=geb->y;
+				p_polygon *npoly=(p_polygon *)malloc(sizeof(p_polygon));
+				npoly->x=(double*)malloc((statusG.freehandpolygon_vertices)*sizeof(double));
+				npoly->y=(double*)malloc((statusG.freehandpolygon_vertices)*sizeof(double));
+				for(int n=0; n< statusG.freehandpolygon_vertices;n++)
+				{
+					srand(time(0));
+					double x1=x+(rand() % (200-100+1))+100;
+					double y1=y+(rand() % (200-100+1))+100;
+					npoly->x[n]=x1;
+					npoly->y[n]=y1;
+				}
+				npoly->num_points=statusG.freehandpolygon_vertices;  //to close the polygon
+				npoly->x0=x;
+				npoly->y0=y;
+				npoly->line_color=0;
+				npoly->fill_color=statusG.freehandpolygon_rgbcolor;
+
+				pari_add_poly_to_main_drawing(npoly, pdG);
+			}
+
+			break;
+
+		case GDK_MOTION_NOTIFY:  //mouse motion means modifying one just drawn
+			if( last_button == 1 )  //if last pressed button was the right one (avoid motion from other buttons)
+			{
+				double x=geb->x;
+				double y=geb->y;
+				double x0=pdG->polys[pdG->num_poly-1]->x0;
+				double y0=pdG->polys[pdG->num_poly-1]->y0;
+				p_polygon *npoly=pdG->polys[pdG->num_poly-1];
+				double ang=2*M_PI/statusG.freehandpolygon_vertices;
+				double radius=sqrt((x-x0)*(x-x0)+(y-y0)*(y-y0));
+				double angoff=atan2( y-y0, x-x0);
+				for(int n=0; n < statusG.freehandpolygon_vertices;n++)
+				{
+					double x1=x+(rand() % (200-100+1))+100;
+					double y1=y+(rand() % (200-100+1))+100;
+					npoly->x[n]=x1;
+					npoly->y[n]=y1;
+				}
+			}
+
+			break;
+
+		default:
+			//Does nothing
+			break;
+	}	
+
 }
 
 /**

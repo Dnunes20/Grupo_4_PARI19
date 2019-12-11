@@ -78,7 +78,7 @@ gboolean on_drawingarea1_motion_notify_event(GtkWidget * widget, GdkEvent * even
 			break;
 
 		case FREEHANDPOLYGON:
-			//...
+			pari_draw_freehandpolygon(event);
 			break;
 
 		case CIRCULARCROWN:
@@ -182,7 +182,39 @@ void on_regularpolygon_rb_clicked(GtkWidget * widget, gpointer user_data)
 void on_freehandpolygon_rb_clicked(GtkWidget * widget, gpointer user_data)
 {
 	//puts("FREEHAND");
+	GtkEntry *entry = GTK_ENTRY(user_data);
+	const char* txt=gtk_entry_get_text(entry);
+	char *tmp=malloc(strlen(txt)+1);
+	strcpy(tmp,txt);
+	int n=atoi(tmp);
+	if (n <3 || n > 99) //only values between 3 and 99 accepted
+	{
+		n=5;
+		sprintf(tmp,"%d",n);
+		gtk_entry_set_text( entry, tmp);
+	}
+	statusG.freehandpolygon_vertices=n;
 	statusG.active_g=FREEHANDPOLYGON;
+	free(tmp);
+
+	GtkEntry *entry2 = GTK_ENTRY(gtk_builder_get_object (builderG, "freehandfill_rgbcolor"));
+	if( entry2)
+	{
+		txt=gtk_entry_get_text(entry2);
+		char *tmp=malloc(strlen(txt)+1);
+		strcpy(tmp,txt);
+		int n=atoi(tmp);
+		if ( n < 0 ) //only -1 is accepted for negatives (no filling)
+		{
+			n=-1;
+			sprintf(tmp,"%d",n);
+			gtk_entry_set_text( entry2, tmp);
+		}
+
+		statusG.freehandpolygon_rgbcolor=n;
+
+		free(tmp);
+	}
 }
 
 /**
