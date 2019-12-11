@@ -1,7 +1,0 @@
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/rebuild_cache.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/cpfiles.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/doc.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/prototypes.h.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/myf.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/allclean.dir
-/home/dnunes/.local/share/Trash/files/Grupo_4_PARI19/Grupo_4_PARI19/doc/CMakeFiles/edit_cache.dir
