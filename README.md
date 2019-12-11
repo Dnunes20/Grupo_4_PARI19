@@ -3,6 +3,27 @@ V. Santos, 07-dez-2019,13:27
 nao da
 
 
+How to send files to online repo
+--------------------------------
+
+```bash
+ git add .
+ git commit -m "mensagem de commit"
+ git push`  
+``` 
+
+Compilation
+----------
+
+```bash
+ mkdir build
+ cd build
+ cmake ..
+ make
+```
+
+
+
 Steps for the class
 --------------------
 
