@@ -8,7 +8,7 @@ How to send files to online repo
 ```bash
  git add .
  git commit -m "mensagem de commit"
- git push`  
+ git push  
 ``` 
 
 Compilation
